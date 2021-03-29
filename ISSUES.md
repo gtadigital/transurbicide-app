@@ -19,6 +19,8 @@ The Transurbicide Project | Known Issues
 - closed https://github.com/gtadigital/transurbicide-app/issues/1
 
 ### Linked Digital Objects
-- lining breakes the export paths 
-- data will be temporarily dropped and relaigned later
+- direct linking of images as implemented in EasyDB breakes the export paths (do instead of oeu)
+- data in field `oeu__oeu_doc_image_transurbicide`have been temporarily dropped and re-aligned later via OpenRefine 
+- link to dump https://github.com/gtadigital/transurbicide-app/files/6223012/tu_dump_images_links.zip
+- https://github.com/gtadigital/transurbicide-app/issues/2
 
