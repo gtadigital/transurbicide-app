@@ -9,7 +9,7 @@ The Transurbicide Project | Known Issues
 ## Taxonomy
 - no Getty AAT Link added
 - thus, we cannot ETL into Semantic Data
-- Solution: We create ourt own semantic Thesaurus
+- Solution: We create our own semantic Thesaurus
 
 ## Built Work Data
 ### Places Construction/Destruction 
@@ -22,5 +22,5 @@ The Transurbicide Project | Known Issues
 - direct linking of images as implemented in EasyDB breakes the export paths (do instead of oeu)
 - data in field `oeu__oeu_doc_image_transurbicide`have been temporarily dropped and re-aligned later via OpenRefine 
 - link to dump https://github.com/gtadigital/transurbicide-app/files/6223012/tu_dump_images_links.zip
-- https://github.com/gtadigital/transurbicide-app/issues/2
+- closed https://github.com/gtadigital/transurbicide-app/issues/2
 
