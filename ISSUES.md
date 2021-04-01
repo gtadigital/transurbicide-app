@@ -4,7 +4,14 @@ The Transurbicide Project | Known Issues
 - Versoin 0.1 (DRAFT)
 
 
+## Places
+- missing Hierarchy
+- added by gat Digital Data Curation Team
+- to be verified https://github.com/gtadigital/transurbicide-app/issues/18 @astanicic
 
+- missing Geo Location
+- run through Wikidata and Geonames
+- added geo loation from Geonames
 
 ## Taxonomy
 - no Getty AAT Link added
@@ -12,7 +19,7 @@ The Transurbicide Project | Known Issues
 - Solution: We create our own semantic Thesaurus
 
 ## Built Work Data
-### Places Construction/Destruction 
+###  Construction/Destruction Places 
 - use an old veriosn of the field
 - data will be temporarily dropped and re-aligned later -> DONE
 - Built Work Avala Tower (ID 653292), has no construction place. but seems to be built in Belgrade -> construction place added
