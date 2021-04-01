@@ -8,7 +8,6 @@ The Transurbicide Project | Known Issues
 - missing Hierarchy
 - added by gat Digital Data Curation Team
 - to be verified https://github.com/gtadigital/transurbicide-app/issues/18 @astanicic
-
 - missing Geo Location
 - run through Wikidata and Geonames
 - added geo loation from Geonames
