@@ -1,0 +1,137 @@
+<bs-navbar data-fluid="true" class="metaphacts-header-navbar" data-fixed-top="true" data-inverse="true" data-role="navigation">
+  <bs-navbar-header>
+    <bs-navbar-brand>
+      <a href="/" style='display: flex;'>
+        <img src=" /assets/no-auth/logo_sari-v1.png" style="height: 32px; margin-top: -4px; margin-right: 25px;"> 
+        {{deploymentTitle}}
+      </a>
+    </bs-navbar-brand>
+    <bs-navbar-toggle/>
+  </bs-navbar-header>
+  <bs-navbar-collapse>
+
+{{!-- out commented by th / June 2018
+    <bs-nav>
+      <mp-resource-link-container uri='http://pages.sari.net/Fonds'>
+        <li title='Fonds'>
+          <a>Fonds</a>             
+        </li>                                                       
+      </mp-resource-link-container>  
+      <mp-resource-link-container uri='http://pages.sari.net/Files'>
+        <li title='Files'>
+          <a>Files</a>
+        </li>
+      </mp-resource-link-container>
+      <mp-resource-link-container uri='http://pages.sari.net/Items'>
+        <li title='Documents'>
+          <a>Items</a>
+        </li>
+      </mp-resource-link-container>
+      <mp-resource-link-container uri='http://pages.sari.net/Objects'>
+        <li title='Built Works'>
+          <a>Objects</a>
+        </li>
+      </mp-resource-link-container>
+      <mp-resource-link-container uri='http://pages.sari.net/Actors'>
+        <li title='Actors'>
+          <a>Actors</a>
+        </li>
+      </mp-resource-link-container>
+    </bs-nav>
+--}}
+
+    <bs-nav data-pull-right="true">
+      <mp-resource-link-container uri='http://pages.sari.net/Search'>
+          <li title="Structured Search">
+            <a><i class="fa fa-search"></i></a>
+          </li>
+      </mp-resource-link-container>
+
+      <mp-has-permission permission='sparql:update'>
+        <ul class="nav navbar-nav">
+           <li>
+              <mp-link url="/sparql" title="Sparql Endpoint">SPARQL</mp-link>
+           </li>
+        </ul>
+      </mp-has-permission>
+
+
+      
+    <bs-nav-dropdown title="Explore" id="bg-nested-dropdown">
+     <bs-menu-item header=true>gta Archive</bs-menu-item>
+      <mp-resource-link-container uri='http://pages.sari.net/Fonds'>
+          <bs-menu-item>Fonds</bs-menu-item>                                                      
+      </mp-resource-link-container>  
+      <mp-resource-link-container uri='http://pages.sari.net/Files'>
+          <bs-menu-item>Files</bs-menu-item>                                                      
+      </mp-resource-link-container>
+      <mp-resource-link-container uri='http://pages.sari.net/Items'>
+          <bs-menu-item>Items</bs-menu-item>                                                      
+      </mp-resource-link-container>
+     <bs-menu-item header=true>Referenced Concepts</bs-menu-item>
+      <mp-resource-link-container uri='http://pages.sari.net/Actors'>
+          <bs-menu-item>Actors</bs-menu-item>                                                      
+      </mp-resource-link-container>
+      <mp-resource-link-container uri='http://pages.sari.net/Objects'>
+          <bs-menu-item>Built Works</bs-menu-item>                                                      
+      </mp-resource-link-container>
+      </bs-nav-dropdown>
+     
+<!-->      
+      <bs-nav-dropdown title="Example Resources" id="bg-nested-dropdown">
+        <bs-menu-item header=true>Liste</bs-menu-item>
+        <bs-menu-item header=true>Documents</bs-menu-item>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/file/09866C8D-4B7D-49CD-B775-F2174B200991'>
+          <bs-menu-item>Scalable Map of Bruxelles</bs-menu-item>
+        </mp-resource-link-container>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/item/12537652-81DB-48A4-A583-D28CE39B2A5F'>
+          <bs-menu-item>Brief | by Walter Gropius</bs-menu-item>
+        </mp-resource-link-container>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/item/1635637B-8A2E-42F0-B27F-BDDEE7ED531C'>
+          <bs-menu-item>CIAM 8 in Hoddesdon</bs-menu-item>
+        </mp-resource-link-container>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/item/B085B920-D59E-4EF2-91A4-3066B34DDA52'>
+          <bs-menu-item>Kinder</bs-menu-item>
+        </mp-resource-link-container>
+
+        <bs-menu-item header=true>Actors / Persons</bs-menu-item>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/actor/AFE69D6B-0C62-4893-A074-49C239C6B9E9'>
+          <bs-menu-item>Le Corbusier</bs-menu-item>
+        </mp-resource-link-container>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/actor/E9DDC718-71F7-4F0F-9374-1CDEB58FE46A'>
+          <bs-menu-item>Giedion, Sigfried</bs-menu-item>
+        </mp-resource-link-container>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/actor/CDFE1F91-E600-4C94-9B91-B8F3FB89F669'>
+          <bs-menu-item>Gropius, Walter</bs-menu-item>
+        </mp-resource-link-container>
+
+        <bs-menu-item header=true>Places</bs-menu-item>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/place/CC7620E7-C853-4842-8059-AC69C6D7CABC'>
+          <bs-menu-item>Paris</bs-menu-item>
+        </mp-resource-link-container>
+        <mp-resource-link-container uri='http://grp.swissartresearch.net/place/B572994E-B6E3-45BD-9A6B-BCBD85CDC013'>
+          <bs-menu-item>Zurich</bs-menu-item>
+        </mp-resource-link-container>
+      </bs-nav-dropdown>
+
+-->
+
+      <mp-nav-account></mp-nav-account>
+      <mp-has-permission permission='sparql:update'>
+        <mp-resource-link-container uri="http://www.metaphacts.com/resource/admin/">
+          <li title="System Settings">
+            <a><i class="fa fa-cog"></i></a>
+          </li>
+        </mp-resource-link-container>
+      </mp-has-permission>
+      <mp-has-permission permission='sparql:update'>
+        <mp-resource-link-container uri="http://help.metaphacts.com/resource/Start">
+          <li title="Help">
+            <a><i class="fa fa-question-circle"></i></a>
+          </li>
+        </mp-resource-link-container>
+      </mp-has-permission>
+      <mp-user-language-switch></mp-user-language-switch>
+    </bs-nav>
+  </bs-navbar-collapse>
+</bs-navbar>
