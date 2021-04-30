@@ -1,0 +1,223 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="rs-header">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rs-navbar"
+        aria-expanded="false" aria-controls="rs-navbar" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="rs-header-logo" href="/">{{deploymentTitle}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="rs-navbar">
+
+      <ul class="nav navbar-nav">
+        {{!--        <li class="rs-nav-about--margin">
+          <a href="https://www.researchspace.org/" target="_blank" class="rs-body-m-M">About</a>
+        </li> --}}
+
+        {{!-- <li class="rs-nav-about--margin">
+          <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" class="rs-body-m-M">Thinking Frames</semantic-link>
+        </li> --}}
+
+      </ul>
+
+        {{!--    <!-- HERE STARTS THE RIGHT SIDE -->   --}}
+
+      <ul class="nav navbar-nav">
+{{!--
+        <li>
+          <semantic-link iri="http://www.researchspace.org/resource/ProjectDashboard" class="rs-body-m-M">Dashboard
+          </semantic-link>
+        </li>
+--}}
+{{!--
+        <li>
+          <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" class="rs-body-m-M">Thinking Frames
+          </semantic-link>
+        </li>
+--}}
+
+{{!-- old version from template
+        <bs-nav-dropdown title="Explore" id="main-header-dropdown" class="rs-nav-resources--margin">
+
+            <li class="rs-dropdown-sectionTitle">By Entity Types</li>    
+            <semantic-link class="text-muted" iri="https://rp-dev.gta.arch.ethz.ch/resource/places"><bs-menu-item>Places</bs-menu-item></semantic-link>
+            <semantic-link iri="https://rp-dev.gta.arch.ethz.ch/resource/actors"><bs-menu-item>Persons and Groups</bs-menu-item></semantic-link>
+            <semantic-link iri="https://rp-dev.gta.arch.ethz.ch/resource/builtworks-projets"><bs-menu-item>Built Works</bs-menu-item></semantic-link>
+            <semantic-link iri="https://rp-dev.gta.arch.ethz.ch/resource/archival-collections"><bs-menu-item>Archival Collections </bs-menu-item></semantic-link>
+            
+            
+        </bs-nav-dropdown> 
+--}}
+
+{{!-- new version from  Matteo --}}
+
+    <bs-nav-dropdown title="Explore by Entities Type" id="basic-nav-dropdown">
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPagePlace"><bs-menu-item >Places</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPagePerson"><bs-menu-item>Persons</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageGroup"><bs-menu-item >Groups</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageBuiltWork"><bs-menu-item>Built Works and Projects</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageCollection"><bs-menu-item>Archival Collections</bs-menu-item></mp-resource-link-container>
+    </bs-nav-dropdown>
+
+
+        <bs-nav-dropdown title="Example Resources" id="main-header-dropdown" >
+
+            <li class="rs-dropdown-sectionTitle">Places</li>
+            <bs-menu-item divider="true"></bs-menu-item>
+            <semantic-link-container class="text-muted" uri="https://resource.swissartresearch.net/place/e23bb1c2-2f27-4b4d-ad1f-2afb9fcfdb5a"><bs-menu-item>Belgrade, Serbia</bs-menu-item></semantic-link-container>
+            <semantic-link-container class="text-muted" uri="https://resource.swissartresearch.net/place/83771e05-ac69-4ec8-9772-fbd614de16e1"><bs-menu-item>Zemun, Serbia</bs-menu-item></semantic-link-container>
+
+            <bs-menu-item divider="true"></bs-menu-item>
+            <li class="rs-dropdown-sectionTitle">Persons</li>
+            <bs-menu-item divider="true"></bs-menu-item>
+            <semantic-link-container uri="https://resource.swissartresearch.net/person/db2c2853-c19e-4f87-8168-c20edb17b3ca"><bs-menu-item>Augustinčić, Antun</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/person/96e92742-6303-4053-a98d-cfaddee586d9"><bs-menu-item>Visentin, Chiara</bs-menu-item></semantic-link-container>
+
+            <bs-menu-item divider="true"></bs-menu-item>
+            <li class="rs-dropdown-sectionTitle">Groups</li>
+            <bs-menu-item divider="true"></bs-menu-item>
+            <semantic-link-container uri="https://resource.swissartresearch.net/group/1a1b538d-7e83-473d-946c-31e64c4a56aa"><bs-menu-item>Arhitektonski fakultet Univerziteta u Beogradu</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/group/83bb7d27-ea41-46da-9fd4-03ba39aa70c1"><bs-menu-item>Society of Belgrade Architects</bs-menu-item></semantic-link-container>
+
+            <bs-menu-item divider="true"></bs-menu-item>
+            <li class="rs-dropdown-sectionTitle">Built Works</li>
+            <bs-menu-item divider="true"></bs-menu-item>
+            <semantic-link-container uri="https://resource.swissartresearch.net/builtwork/6281745b-8502-4a57-b2e5-fe9b79da4bde"><bs-menu-item>Air Force Defense Headquarters</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/builtwork/59a48353-d59d-4c58-84b9-f9e20fa8fb00"><bs-menu-item>The Battle of Sutjeska Memorial Monument Complex in the Valley of Heroes</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/builtwork/d8c5944f-14e9-4aa2-aa44-7a9b3ef2a8c5"><bs-menu-item>RTS Memorial in Aberdareva Street</bs-menu-item></semantic-link-container>
+            <bs-menu-item divider="true"></bs-menu-item>
+            
+            <li class="rs-dropdown-sectionTitle">Archival Collections</li>
+            <bs-menu-item divider="true"></bs-menu-item>
+            <semantic-link-container uri="https://resource.swissartresearch.net/archivalobject/654497"><bs-menu-item>08-001 | Air Force Defense Headquarters</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/archivalobject/172346"><bs-menu-item>01-056 | Monument 16 RTS Memorial in Aberdareva Street</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/archivalobject/655345"><bs-menu-item>01-061-18 | Monument 16 RTS Memorial in Aberdareva Street - catalogue</bs-menu-item></semantic-link-container>
+            <semantic-link-container uri="https://resource.swissartresearch.net/archivalobject/653763"><bs-menu-item>03-079 | The New Gates of Belgrade</bs-menu-item></semantic-link-container>
+                                     
+
+{{!
+            <bs-menu-item divider="true"></bs-menu-item>
+            <li class="rs-dropdown-sectionTitle">Semantic Narratives</li>
+            <semantic-link-container uri="#"><bs-menu-item>Resource 4</bs-menu-item></semantic-link-container>
+            <bs-menu-item divider="true"></bs-menu-item>
+
+            <li class="rs-dropdown-sectionTitle">Knowledge Maps</li>
+            <semantic-link-container uri="#"><bs-menu-item>Resource 5</bs-menu-item></semantic-link-container>
+           <bs-menu-item divider="true"></bs-menu-item>
+
+            <li class="rs-dropdown-sectionTitle">Searches</li>
+            <semantic-link-container uri="#"><bs-menu-item>Resource 6</bs-menu-item></semantic-link-container>
+            <bs-menu-item divider="true"></bs-menu-item>
+
+            <li class="rs-dropdown-sectionTitle">Arguments</li>
+            <semantic-link-container uri="#"><bs-menu-item>Resource 7</bs-menu-item></semantic-link-container>
+--}}            
+        </bs-nav-dropdown> 
+
+
+        <li class="rs-only-xs">
+          <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" urlqueryparam-view='simple-search'
+            title="Advanced seach" style="display: inline-block;">
+            Search
+          </semantic-link>
+        </li>
+
+        <li class="rs-xs-none {{!-- rs-navigate-input --}}">
+          {{!-- <input type="text" placeholder="Navigate To .." disabled class="rs-textInput--white rs-body-m-M" style="height: 27px;"> --}}
+          <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" urlqueryparam-view='simple-search'
+            title="Advanced seach" style="padding-right: 5px; padding-top: 3px;">
+            <i class="rs-icon rs-icon-search"></i>
+          </semantic-link>
+        </li>
+
+        {{!-- <mp-anonymous-hidden>
+          <li><mp-link url="/sparql" class="rs-body-m-M">Sparql</mp-link></li>
+        </mp-anonymous-hidden> --}}
+
+
+        <li class="rs-xs-none">
+          <semantic-link iri="http://www.researchspace.org/resource/Documentation" title="Documentation"
+            class="rs-setting-icon" style="padding-right: 5px;">
+            <i class="fa fa-question-circle"></i>
+          </semantic-link>
+        </li>
+
+
+        <li class="rs-only-xs">
+          <semantic-link iri="http://www.researchspace.org/resource/Documentation" title="Documentation">
+            Documentation
+          </semantic-link>
+        </li>
+
+        <mp-anonymous-hidden>
+          <li class="rs-only-xs">
+            <semantic-link iri="http://www.researchspace.org/resource/admin" title="System Settings">
+              Setting
+            </semantic-link>
+          </li>
+        </mp-anonymous-hidden>
+
+        <mp-anonymous-hidden>
+          <li class="rs-xs-none">
+            <semantic-link iri="http://www.researchspace.org/resource/admin" title="System Settings"
+              class="rs-setting-icon">
+              <i class="fa fa-cog"></i>
+            </semantic-link>
+          </li>
+        </mp-anonymous-hidden>
+
+
+        <mp-user-language-switch></mp-user-language-switch>
+        <mp-anonymous-hidden alt='<li><a href="/login" title="login" class="rs-body-m-M">Logout</a></li>'>
+          <bs-nav-dropdown title="Account" id="rs-account-dropdown" class="rs-account-dropdown">
+
+            <bs-menu-item title='userPrincipal'>
+              <semantic-query
+                query='SELECT ?__useruri__ ?userName { BIND(REPLACE(REPLACE(STR(?__useruri__), STR(User:), ""), "%40", "@") as ?userName) }'
+                template='\{{> template}}'>
+                <template id='template'>
+                  <semantic-link-container uri='\{{bindings.0.__useruri__.value}}'>
+                    <div class="user-dropdown_item">
+                      <i class="rs-icon rs-icon-user_round rs-xs-none"></i>
+                      <span>\{{bindings.0.userName.value}}</span>
+                    </div>
+                  </semantic-link-container>
+                </template>
+              </semantic-query>
+            </bs-menu-item>
+
+            {{!--       <semantic-link-container uri="http://www.researchspace.org/resource/MyImages">
+                  <bs-menu-item title='my images'>My Images</bs-menu-item>
+                </semantic-link-container>
+
+                <semantic-link-container uri="http://www.researchspace.org/resource/MyPages">
+                  <bs-menu-item title='my pages'>My Narratives</bs-menu-item>
+                </semantic-link-container>
+
+                <semantic-link-container uri="http://www.researchspace.org/resource/MyKnowledgeMaps">
+                  <bs-menu-item title='my maps'>My Knowledge Maps</bs-menu-item>
+                </semantic-link-container>
+                
+                <bs-menu-item divider="true"></bs-menu-item> --}}
+            <bs-menu-item href="/login" title='logout'>
+              <div class="user-dropdown_item">
+                <i class="rs-icon rs-icon-logout rs-xs-none"></i>
+                <span>Logout</span>
+              </div>
+            </bs-menu-item>
+
+          </bs-nav-dropdown>
+        </mp-anonymous-hidden>
+
+
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
