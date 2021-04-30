@@ -1,0 +1,32 @@
+[[#>StaticPageFrame headerIcon="fa fa-info-circle"  title="About"]]
+
+  <div>The goal of the work package was to a) develop, verify, and document a comprehensive semantic data models to adequately capture the acquired data, the research topic, and its methodological foundation (knowledge representation) and to b) provide a working prototype for a research platform that allows to collect, analyse and publish complex historical data and visualise related scholarly findings. To achieve these goals, gta Digital has i) adapted established methods and tools for data collection for digitized visual resources, related meta data, and reference data following the specific project needs (a tool derived from its own Collections Management System), ii) established an process to extract, transform and load the primary research data (ETL process), and iii) developed and implemented a dedicated Linked Data Platform, that allows to search, explore, visualise the published semantic data. </div>
+<div>&nbsp;</div>
+<div>While the project specific ETL-process is based on standard programming code and languages, the delivered research portal is designed as linked data platform (LDP), entirely based on internationally and open standards in the semantic web to store, query, and retrieve data (such as RDF, RDFS, SKOS, SPARQL, all acknowledged by the W3C). This guarantees accessibility, re-usability, and – most important – full interoperability of the research results in view of further according to the FAIR principles. </div>
+<div>&nbsp;</div>
+<div>The Linked Data Platform (http://transurbicide.gta.arch.ethz.ch) developed to publish the Transurbicide Project is entirely open source based and has been developed in cooperation with the Consortium for Open Data in the Humanities (CORDH) and the British Museum (using their ResearchSpace platform as a basis), thus guaranteeing long term accessibility of the code. Whereas the semantic framework has been developed in close cooperation with and based on the Semantic Reference Data Models of the Swiss Art Research Infrastructure project (SARI), widely used in the cultural heritage domain. Its implementation is based on and fully compatible with the International Council of Museums (ICOM) and the International Committee for Documentations (CIDOC) Conceptual Reference Model (CRM) as high level abstraction model for semantic data in the cultural heritage domain and uses specific extensions tailored to the needs of the project (developed by Th. Hänsli, M. Lorenzini, G. Bruseker, A. Guillem). Finally, a comprehensive and project specific taxonomy, has been developed and published based as a thesaurus based on the scholarly acknowledged and open standard for Simple Knowledge Organization System (SKOS). 
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+
+<h4>Statistics</h4>
+  <hr>
+  <i>Number of distinct instance types  - Only most specific CRM types are counted</i>
+  <semantic-chart type='pie'
+    query='
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+        SELECT DISTINCT ?type (COUNT(?instance) as ?instanceCount) WHERE { 
+          ?instance a ?type. 
+          ?type rdfs:subClassOf+ crm:E1_CRM_Entity. 
+         FILTER NOT EXISTS {?t rdfs:subClassOf ?type} 
+          FILTER(?type!=owl:Thing) 
+
+        }GROUP BY ?type
+    ' 
+    sets='[{"dataSetName": "Number of instances", "category": "type", "value": "instanceCount"}]'
+  ></semantic-chart>
+
+[[/StaticPageFrame]]
+
