@@ -1,5 +1,88 @@
+
+
+<style>
+    .rs-dropdown-sectionTitle {
+        background-color: #34568c!important;
+    	background: #34568c;
+		color: white;
+    }
+	[role=menueitem] {
+	  background: #34568c;
+	  color: white;
+	}
+/*
+
+
+	div,
+	span {
+	  color: white;
+	}
+*/
+
+
+    .navbar-default,
+    .navbar-inverse,
+    .metaphacts-header-navbar.bg-primary {
+        background-color: #34568c!important;
+    }
+
+    .metaphacts-header-navbar .nav-item a:hover,
+    .metaphacts-header-navbar .nav-item a:focus,
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus,
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        background-color: #34568c;
+    }
+
+    .navbar .dropdown-menu {
+        background-color: #34568c;
+    }
+    .dropdown-item:hover,
+    .navbar-inverse .dropdown-menu > li > a:hover,
+    .navbar-inverse .dropdown-menu > .active > a,
+    .navbar-inverse .dropdown-menu > .active > a:hover,
+    .navbar .dropdown-menu > li > a:hover {
+        background-color: #34568c!important;
+    }
+    .footer {
+        background-color: #34568c;
+        padding: 30px;
+    }
+    .footer__sponsor-logos {
+        margin-right: 30px;
+    }
+    .dropdown-menu > li > a {
+        color: white;
+    }
+    
+    
+    .button {
+  border: none;
+  color: white;
+  padding: 18px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 12px 36px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+
+</style>
+
+
+
+<!-- 
+<link href="/assets/styles.css" rel="stylesheet" type="text/css">
+-->
+
 <footer class="footer">
-    <div class="footer__pixel-groove"></div>
+<!--     <div class="footer__pixel-groove"></div> // WAS HR -->
     <div data-flex-layout="row top-stretch" class="footer__outer-flex-row">
         <div data-flex-self="size-x2">
             <div data-flex-layout="row top-left">
@@ -8,10 +91,10 @@
                 </div>
                 <div data-flex-layout="columns justify-left" class="footer__sponsor-text">
                     <p class="text-muted">
-                      <span class="style--secondary-font">A project of <a class="text-muted" target="_blank" href="https://www.gta.arch.ethz.ch/about/about-us/lang/en">Institute gta</a> / <a class="text-muted" target="_blank" href="https://www.ethz.ch/">ETH Zurich</a></span>
+                      <span class="style--secondary-font">A project of &nbsp; <a class="text-muted" target="_blank" href="https://www.gta.arch.ethz.ch/about/about-us/lang/en">Institute gta</a> / <a class="text-muted" target="_blank" href="https://www.ethz.ch/">ETH Zurich</a></span>&nbsp; in cooperation with <a class="text-muted" target="_blank" href="https://www.tudelft.nl/en/staff/a.stanicic/">TU Delft</a></span>
                     </p>
                     <p class="text-muted">
-                        <span class="style--secondary-font">Technology provided by <a class="text-muted" target="_blank" href="https://www.sari.uzh.ch/">Swiss Art Research Infrastructure (SARI)</a>
+                        <span class="style--secondary-font">Semantic Technology by <a class="text-muted" target="_blank" href="https://digital.gta.arch.ethz.ch/about/about-us/lang/en">gta Digital</a> &nbsp;in cooperation with <a class="text-muted" target="_blank" href="https://swissartresearch.net/">Swiss Art Research Infrastructure</a>
                     </p>
                     <p class="text-muted">
                         <span class="style--secondary-font">Platform powered by <a class="text-muted" target="_blank" href="http://researchspace.org/">ResearchSpace</a></span>
@@ -22,14 +105,24 @@
 
         <div class="footer__links-col">
             <p class="text-muted"><a class="text-muted" href="/resource/about">About</a></p>
-            <p class="text-muted"><a class="text-muted" href="/resource/roadmap">Roadmap</a></p>
-            <p class="text-muted"><a class="text-muted" href="/resource/contact">Contact Us</a></p>
+            <p class="text-muted"><a class="text-muted" href="/resource/semantic-modeling">  Semantic Modeling </a></p>
+            <p class="text-muted"><a class="text-muted" href="/resource/roadmap"> Roadmap</a></p> 
         </div>
 
         <div class="footer__links-col">
-            <p class="text-muted"><a class="text-muted" href="/resource/terms">Terms of Use</a></p>
-            <p class="text-muted"><a class="text-muted" href="http://www.cidoc-crm.org">Semantic Models</a></p>
+            <p class="text-muted"><a class="text-muted" href="/resource/contact">Feedback and Contact </a></p>
             <p class="text-muted"><a class="text-muted" href="/resource/acknowledgements">Acknowledgements</a></p>
+{{!--             <p class="text-muted"><a class="text-muted" href="/resource/terms">Terms of Use</a></p> --}}
+            <p class="text-muted"><a class="button button2" href="/resource/startto">Debug</a></p> 
+
         </div>
     </div>
 </footer>
+
+
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPagePlace"><bs-menu-item >Places</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPagePerson"><bs-menu-item>Persons</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageGroup"><bs-menu-item >Groups</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageBuiltWork"><bs-menu-item>Built Works and Projects</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageCollection"><bs-menu-item>Archival Collections</bs-menu-item></mp-resource-link-container>
+
