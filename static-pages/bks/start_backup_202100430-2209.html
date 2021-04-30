@@ -1,0 +1,58 @@
+/*
+backup from start page as of 2021-04-20--2209 
+*/
+
+
+
+<div class="page">
+
+<bs-tabs id='semantic-search' mount-on-enter=true>
+  <bs-tab event-key='text search' title='Text Search' class="basicSearch">
+
+<semantic-search config='[[searchConfigForFieldsFromQuery "SELECT DISTINCT ?field WHERE { ?field a <http://www.researchspace.org/resource/system/fields/Field> . ?field <http://www.researchspace.org/resource/system/fields/domain> ?domain . ?field <http://www.researchspace.org/resource/system/fields/range> ?range . }"]]'>
+
+     <semantic-search-query-keyword 
+        domain='<http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity>'
+        query='
+          SELECT ?subject WHERE { 
+            ?subject  a  ?type .
+                                    ?type (rdfs:subClassOf)* crm:E1_CRM_Entity .
+                                    ?subject  crm:P1_is_identified_by  ?name_identifier .
+                                    ?name_identifier
+                                              a                     crm:E41_Appellation ;
+                                              rdfs:label            ?label
+                                                                    FILTER REGEX(STR(?label), ?__token__, "i") }
+             
+          
+        '
+        default-query='
+            SELECT ?subject WHERE { 
+             ?subject a ?type .
+             ?type rdfs:subClassOf* crm:E1_CRM_Entity .
+            }         
+        '
+        debounce=500
+      ></semantic-search-query-keyword>
+      [[> rsp:SearchResults]]  
+    </semantic-search>
+  </bs-tab>
+
+  <bs-tab event-key='structured search' title='Structured Search' class="basicSearch">
+    [[> rsp:Structured_Search_main]]  
+
+      </bs-tab>
+ 
+</bs-tabs>
+
+
+    <bs-nav-dropdown title="Entity Search" id="basic-nav-dropdown">
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPagePerson"><bs-menu-item>Person</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageCollection"><bs-menu-item>Collection</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageBuiltWork"><bs-menu-item>Built works</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPagePlace"><bs-menu-item >Place</bs-menu-item></mp-resource-link-container>
+      <mp-resource-link-container uri="http://www.researchspace.org/resource/LandingPageGroup"><bs-menu-item >Group</bs-menu-item></mp-resource-link-container>
+    </bs-nav-dropdown>
+
+</div>
+
+
