@@ -1,0 +1,100 @@
+<div style="clear:both;"></div>
+<div class="page">
+    <div class='page__body'>
+
+        <bs-tabs id='semantic-search' mount-on-enter=true>
+            <bs-tab event-key='text search' title='Text Search' class="basicSearch">
+                <semantic-search
+                relations='{
+                
+                    
+                    "<https://resource.swissartresearch.net/fieldDefinition/collection_production_place_inverse>":[
+                    {
+                      "kind": "resource",
+                      "queryPattern": "
+                        {
+                            $subject a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>; 
+                            ^<http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?production ;
+                          <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>   ?name_identifier . 
+                   ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+                   ?name_identifier rdfs:label ?appellation_value. 
+                   ?production a <http://www.cidoc-crm.org/cidoc-crm/E12_Production>;
+                          ^<http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?__value__.
+                          ?__value__ a <http://www.cidoc-crm.org/cidoc-crm/E78_Collection>;
+                           <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>   ?name .
+                       ?name a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+                             rdfs:label ?__literal__. 
+                    }
+                    "}
+                    ]
+                  
+                }'
+        
+                                      
+                search-profile='{                   
+                  "categories":  
+                [
+                {
+                    "iri":"<http://www.cidoc-crm.org/cidoc-crm/E78_Collection>",
+                    "label":"Concept",
+                    "thumbnail": "../images/fcs/dates.svg"
+                  }  , {
+                    "iri":"<http://www.cidoc-crm.org/cidoc-crm/E53_Place>",
+                    "label":"Location",
+                    "thumbnail": "../images/fcs/places.svg"
+                  }  
+                ],
+                
+                "relations":
+                [
+                         
+                  {
+                    "iri":"<https://resource.swissartresearch.net/fieldDefinition/collection_production_place_inverse>",
+                    "label":"Creation Place",
+                    "hasDomain":"<http://www.cidoc-crm.org/cidoc-crm/E53_Place>",
+                    "hasRange":"<http://www.cidoc-crm.org/cidoc-crm/E78_Collection>"
+                  }
+                    
+                ]
+              }'
+                    >
+<semantic-search-query-keyword domain='<http://www.cidoc-crm.org/cidoc-crm/E53_Place>' query='
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+        SELECT ?subject 
+        WHERE {
+          $subject a 
+              <http://www.cidoc-crm.org/cidoc-crm/E53_Place>; 
+                <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>   ?name_identifier . 
+          ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+          ?name_identifier rdfs:label ?label.
+          FILTER REGEX(STR(?label), ?__token__, "i") 
+        } 
+        ' default-query='
+       prefix org:   <http://example.com/org/>
+            prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            prefix skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX wdt:  <http://www.wikidata.org/prop/direct/>
+            PREFIX wd:  <http://www.wikidata.org/entity/>
+            prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>
+
+            SELECT DISTINCT $subject ?label 
+            WHERE { 
+              $subject a 	crm:E53_Place
+              
+            
+            }
+        ' debounce=500></semantic-search-query-keyword>
+                    [[> rsp:SearchResultsPlace]]
+                </semantic-search>
+            </bs-tab>
+        
+        </bs-tabs>
+
+
+
+
+        <div style="margin-top:100px;"></div>
+    </div>
+</div>
