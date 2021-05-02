@@ -29,6 +29,21 @@
         {{!--    <!-- HERE STARTS THE RIGHT SIDE -->   --}}
 
       <ul class="nav navbar-nav">
+        <li class="rs-xs-none {{!-- rs-navigate-input --}}">
+{{!--          <input type="text" placeholder="Navigate To .." disabled class="rs-textInput--white rs-body-m-M" style="height: 27px;"> --}}
+          <semantic-link iri="http://www.researchspace.org/resource/structured-search" urlqueryparam-view='structured-search'
+            title="Semantic Search" style="padding-right: 5px; padding-top: 3px;">
+            <i class="rs-icon rs-icon-search"></i>
+          </semantic-link>
+        </li>
+
+
+        <li>
+          <semantic-link iri="http://www.researchspace.org/resource/structured-search" class="rs-body-m-M">Semantic Search
+          </semantic-link>
+        </li>
+
+
 {{!--
         <li>
           <semantic-link iri="http://www.researchspace.org/resource/ProjectDashboard" class="rs-body-m-M">Dashboard
@@ -41,6 +56,10 @@
           </semantic-link>
         </li>
 --}}
+
+
+
+
 
 {{!-- old version from template
         <bs-nav-dropdown title="Explore" id="main-header-dropdown" class="rs-nav-resources--margin">
@@ -68,6 +87,7 @@
 
         <bs-nav-dropdown title="Example Resources" id="main-header-dropdown" >
 
+            <bs-menu-item divider="true"></bs-menu-item>
             <li class="rs-dropdown-sectionTitle">Places</li>
             <bs-menu-item divider="true"></bs-menu-item>
             <semantic-link-container class="text-muted" uri="https://resource.swissartresearch.net/place/e23bb1c2-2f27-4b4d-ad1f-2afb9fcfdb5a"><bs-menu-item>Belgrade, Serbia</bs-menu-item></semantic-link-container>
@@ -91,8 +111,8 @@
             <semantic-link-container uri="https://resource.swissartresearch.net/builtwork/6281745b-8502-4a57-b2e5-fe9b79da4bde"><bs-menu-item>Air Force Defense Headquarters</bs-menu-item></semantic-link-container>
             <semantic-link-container uri="https://resource.swissartresearch.net/builtwork/59a48353-d59d-4c58-84b9-f9e20fa8fb00"><bs-menu-item>The Battle of Sutjeska Memorial Monument Complex in the Valley of Heroes</bs-menu-item></semantic-link-container>
             <semantic-link-container uri="https://resource.swissartresearch.net/builtwork/d8c5944f-14e9-4aa2-aa44-7a9b3ef2a8c5"><bs-menu-item>RTS Memorial in Aberdareva Street</bs-menu-item></semantic-link-container>
-            <bs-menu-item divider="true"></bs-menu-item>
-            
+
+            <bs-menu-item divider="true"></bs-menu-item>            
             <li class="rs-dropdown-sectionTitle">Archival Collections</li>
             <bs-menu-item divider="true"></bs-menu-item>
             <semantic-link-container uri="https://resource.swissartresearch.net/archivalobject/654497"><bs-menu-item>08-001 | Air Force Defense Headquarters</bs-menu-item></semantic-link-container>
@@ -101,7 +121,7 @@
             <semantic-link-container uri="https://resource.swissartresearch.net/archivalobject/655424"><bs-menu-item>03-032-9 | New Gates of Belgrade (competition brief)</bs-menu-item></semantic-link-container>
                                      
 
-{{!
+{{!--
             <bs-menu-item divider="true"></bs-menu-item>
             <li class="rs-dropdown-sectionTitle">Semantic Narratives</li>
             <semantic-link-container uri="#"><bs-menu-item>Resource 4</bs-menu-item></semantic-link-container>
@@ -120,21 +140,24 @@
 --}}            
         </bs-nav-dropdown> 
 
-
+{{!-- 
         <li class="rs-only-xs">
           <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" urlqueryparam-view='simple-search'
             title="Advanced seach" style="display: inline-block;">
             Search
           </semantic-link>
         </li>
+--}} 
 
         <li class="rs-xs-none {{!-- rs-navigate-input --}}">
-          {{!-- <input type="text" placeholder="Navigate To .." disabled class="rs-textInput--white rs-body-m-M" style="height: 27px;"> --}}
-          <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" urlqueryparam-view='simple-search'
+{{!--          <input type="text" placeholder="Navigate To .." disabled class="rs-textInput--white rs-body-m-M" style="height: 27px;"> --}}
+{{!--          <semantic-link iri="http://www.researchspace.org/resource/ThinkingFrames" urlqueryparam-view='simple-search'
             title="Advanced seach" style="padding-right: 5px; padding-top: 3px;">
             <i class="rs-icon rs-icon-search"></i>
-          </semantic-link>
+          </semantic-link>--}}
         </li>
+
+
 
         {{!-- <mp-anonymous-hidden>
           <li><mp-link url="/sparql" class="rs-body-m-M">Sparql</mp-link></li>
